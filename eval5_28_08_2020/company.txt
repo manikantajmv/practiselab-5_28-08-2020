@@ -1,0 +1,58 @@
+package test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+public class sample {
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print("h1");
+		sample pro =new sample();
+		pro.createConnection();
+		
+	}
+	void createConnection() 
+	{
+		try {
+			Class.forName("com.mysql.jdbc.Driver");	
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","vishnu17");
+			System.out.println("Database Connection Success");
+			java.sql.Statement stmt =con.createStatement();
+			ResultSet rs=stmt.executeQuery("SELECT sname from students where cgpa=\"8\";");
+			System.out.println("Students where cgpa is 8 is ");
+			while(rs.next())
+			{
+				System.out.println(rs.getString("sname"));
+			}
+			System.out.println();
+			ResultSet rs1=stmt.executeQuery("SELECT sname from students where company=\"infosys\";");
+			System.out.println("Students where company is infosys is ");
+			while(rs1.next())
+			{
+				System.out.println(rs1.getString("sname"));
+			}
+			
+			System.out.println();
+			ResultSet rs2=stmt.executeQuery("SELECT sname from students order by sname;");
+			System.out.println("Students names ordered in descending is ");
+			while(rs2.next())
+			{
+				System.out.println(rs2.getString("sname"));
+			}
+			
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

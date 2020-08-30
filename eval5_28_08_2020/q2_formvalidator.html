@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerform</title>
+    <style>
+body{
+    background-color: aquamarine;
+}
+.table {
+  background:burlywood;
+  box-sizing:content-box;
+  font-family: sans-serif;
+  padding: 50px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+  margin: 15px auto;
+  width: 1000px;
+}
+
+.field-row {
+  position: relative;
+  width: 100%;
+}
+.form-label {
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px 5px 0;
+  text-align: right;
+  width: 100px;
+}
+
+
+.form-button {
+  background: linear-gradient(180deg, #808080, #2a2a2a);
+  border: none;
+  border-radius: 0;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <form class="table">
+        <p style="color: red;">* denotes a required field</p>
+        <div class="field-row">
+            <span>
+           <label class="form-label" for="firstName">First Name* :</label>
+           <input type="text" id="firstName" required>
+        </span>
+        <span class="field-row">
+            <label class="form-label" for="middlename">Middle Name:</label>
+            <input type="text" id="middleName">
+        </span>
+        <span class="field-row">
+           <label class="form-label cf" for="lastName">Last Name* :</label>
+           <input type="text" id="lastName" required>
+        </span>
+        </div>
+        <br>
+        <div class="field-row">
+            <label class="form-label" for="tel">Permanent Address</label>
+            <input type="tel" id="tel" required>
+            <span><label>Country* :</label>
+                <select class="form-dropdown field" required>
+                    <option value="empty"> </option>
+                    <option value="India"> INDIA </option>
+                    <option value="Australia"> AUSTRALIA </option>
+                    <option value="USA"> USA </option>
+                    <option value="Pakisthan"> PAKISTHAN </option>
+                 </select></span>
+         </div>
+         <br>
+         <div>Name Of The Gaurdian :</div>
+         <br>
+         <div class="field-row">
+            <span>
+           <label class="form-label" for="firstName">First Name* :</label>
+           <input type="text" id="firstName" required>
+        </span>
+        <span class="field-row">
+            <label class="form-label" for="middlename">Middle Name:</label>
+            <input type="text" id="middleName" >
+        </span>
+        <span class="field-row">
+           <label class="form-label cf" for="lastName">Last Name* :</label>
+           <input type="text" id="lastName" required>
+        </span>
+        </div>
+        <br>
+        <div class="field-row">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" id="email" required>
+         </div>
+         <br>
+        <div class="field-row">
+           <label class="form-label" for="dateOfBirth">Date of birth</label>
+           <input type="date" id="dateOfBirth" min="1900-01-01" max="2015-09-18"  required>
+        </div>
+        <br>
+        <div class="field-row">
+           <label class="form-label" for="tel">Mobile Number :</label>
+           <input type="tel" id="tel" required>
+        </div>
+        <br>
+        <div class="field-row">
+            <label class="form-label">Education Qualification :</label>
+            <select class="form-dropdown field">
+               <option value="0"> </option>
+               <option value="1">less then or 10th </option>
+               <option value="2">Intermediate </option>
+               <option value="3"> B.Tech</option>
+               <option value="4"> Degree </option>
+               <option value="5">Medicine </option>
+               <option value="6">Others </option>
+            </select>
+         </div>
+         <br>
+<div>Details Of last degree of Parent :</div>
+        <br><div class="field-row">
+<spam>
+            <label class="form-label" for="hs">Name of the school:</label>
+           <input type="text" id="hs" required>
+        </spam>
+        <spam>
+            <label for="marks">Registerd Number :</label>
+            <input type="text" id="numb" >
+        </spam>
+        <spam><label>Percentage :</label>
+        <input type="number" id="per" ></spam>
+        </div>
+       <br>
+        <div class="field-row">
+           <label class="form-label"> Occupation Of Guardian :</label>
+           <select class="field form-dropdown">
+               <option value="empty"></option>
+              <option value="business"> Business </option>
+              <option value="lecturer"> Lecturer </option>
+              <option value="policeofficer"> Police </option>
+              <option value="govtofficials"> govtofficer </option>
+              <option value="Softwareengineer"> Software Engineer </option>
+              <option value="dailylabour"> Dialy Labour </option>
+              <option value="other"> Other </option>
+           </select>
+        </div>
+        <br>
+        <div><label>Gender</label>
+            <br><br>
+            <spam>
+            <label>Male</label>
+        <input type="radio" id="occupation"></spam>
+        <spam>
+            <label>FeMale</label>
+        <input type="radio" id="occupation"></spam></div><br>
+        <div class="field-row">
+            <label class="form-label"> Religion :</label>
+            <select class="field form-dropdown">
+                <option value="empty"></option>
+               <option value="business"> Hindhu </option>
+               <option value="lecturer"> Muslim </option>
+               <option value="policeofficer"> Christian </option>
+               <option value="other"> Other </option>
+            </select>
+         </div>
+         <br>
+        <div class="field-row">
+           <label class="form-label"></label>
+           <button class="form-button">Register</button>
+        </div>
+     </form>
+</body>
+</html>
